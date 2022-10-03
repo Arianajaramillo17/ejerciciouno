@@ -1,11 +1,12 @@
 import React from 'react'
+import Image from 'next/image'
 import style from '../styles/compstyles/footer.module.css'
-import logo from '../assets/logo-larepublica.png'
+
 export default function Footer() {
   return (
     < footer className={style.box_footer}>
       <div className={style.footer__container__color}>
-        <div className={style.footer__container__size}>
+        <section className={style.footer__container__size}>
           <ul className={style.footer__container}>
             <li className={style.footer__container__navitem}><a href="https://larepublica.pe/ultimas-noticias/"> Últimas noticias </a></li>
             <li className={style.footer__container__navitem}> <a href="https://larepublica.pe/politica/">Política </a></li>
@@ -30,16 +31,17 @@ export default function Footer() {
             <li className={style.footer__container__navitem}><a href="https://larepublica.pe/horoscopo-chino/"> Horóscopo chino </a> </li>
             <li className={style.footer__container__navitem}><a href="https://larepublica.pe/datos-lr/respuestas/2022/01/06/cual-es-el-nombre-oficial-del-ano-2022-en-peru-atmp/"> Nombre del Año 2022 </a> </li>
           </ul>
-        </div>
-        <div className={style.footer__container_info }>
-          <img src={logo} alt="logo"
-      width="350px"
-      height="300px"/>
+        </section>
+        <section className={style.footer__container_info }>
+          <div className={style.footer__container__movability}>
+      <Image src={'/assets/logo-larepublica.png'} height={100} width={310} alt="logo" className={style.footer_container_logo}/>
+
           <span className={style.containerFooterBorderRight_all_rights}>©Todos los derechos reservados - 2022</span>
-          <a>Políticas y estándares</a>
-          <a>Términos de Uso</a>
-          <a>Contáctenos</a>
+          <span className={style.containerFooterBorderRight_all_rights}><a >Políticas y estándares -</a>
+          <a >Términos de Uso</a></span>
+          <a className={style.containerFooterBorderRight_all_rights}>Contáctenos</a>
         </div>
+        </section>
       </div>
     </footer>
   )
