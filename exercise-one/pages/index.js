@@ -1,9 +1,8 @@
 import Head from 'next/head'
-import useSWR from 'swr';
-import Image from 'next/image'
+import useSWR from 'swr'
 import styles from '../styles/Home.module.css'
-import Footer from '../components/footer'
-import Header from '../components/Header'
+import Footer from '../pages/components/footer'
+import Header from '../pages/components/Header'
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 export default function Home() {
